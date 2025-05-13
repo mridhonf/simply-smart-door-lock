@@ -1,0 +1,32 @@
+Nama   = "Muhammad Ridho Nur Fadillah"
+NIM    = "312410150"
+Kelas  = "TI.24.C.3"
+Matkul = "Arsitektur dan Organisasi Komputer (UTS)"  
+
+print("Nama  : ", Nama)
+print("NIM   : ", NIM)
+print("Kelas : ", Kelas)
+print("Matkul: ", Matkul)
+print("======[Selamat datang di Smart Door Lock Sederhana by Ridho]======")
+
+
+# Dapatkan input dari pengguna
+door_closed_input = input("Apakah pintunya tertutup? (true/false): ").strip().lower()
+no_motion_input = input("Apakah tidak ada gerakan selama 10 menit? (true/false): ").strip().lower()
+security_mode_input = input("Apakah Security Mode Aktif? (true/false): ").strip().lower()
+
+
+# Konversi input ke nilai boolean
+door_closed = door_closed_input == 'true'
+no_motion = no_motion_input == 'true'
+security_mode = security_mode_input == 'true'
+
+
+
+
+# Menentukan apakah pintu harus dikunci atau tidak
+if (door_closed and no_motion) or security_mode:
+    print("Door Locked")
+else:
+    print("Door Unlocked")
+
